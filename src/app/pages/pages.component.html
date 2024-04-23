@@ -1,0 +1,63 @@
+<p>
+    <mat-toolbar>
+      <button mat-icon-button *ngIf="sidenav.mode ==='over'" (click)="sidenav.toggle()">
+        <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
+        <mat-icon *ngIf="sidenav.opened">close</mat-icon>
+      </button>
+  
+      <span>Estudiantes</span>    
+    </mat-toolbar>
+  </p>
+  
+  <mat-sidenav-container>
+    <mat-sidenav class="mat-elevation-z8" #sidenav="matSidenav" mode="side" opened>
+      <img src="https://cdn.pixabay.com/photo/2023/07/04/07/25/self-consciousness-8105584_960_720.jpg" class="avatar mat-elevation-z8" alt="">  
+      <h4 class="name">
+        Nombre completo
+      </h4>
+      <p class="designation">
+        información relevante
+      </p>
+  
+      <mat-divider></mat-divider>
+  
+      <a [routerLink]="['student/studentCreate']">
+        <button mat-stroked-button class="menu-button">
+          <mat-icon>person</mat-icon>
+          <span>Crear</span>
+       </button>
+      </a>
+      
+      <a [routerLink]="['student/students']">
+        <button mat-stroked-button class="menu-button">
+          <mat-icon>sort</mat-icon>
+          <span>Lista</span>
+        </button>
+      </a>
+  
+      <a [routerLink]="['student/studentDetails']">
+        <button mat-stroked-button class="menu-button">
+          <mat-icon>settings_applications</mat-icon>
+          <span>Detalles</span>
+        </button>
+      </a>
+
+      <mat-divider></mat-divider>
+      <a [routerLink]="['/login']">
+        <button mat-stroked-button class="menu-button">
+          <mat-icon>logout</mat-icon>
+            <span>Salir</span>
+        </button>
+      </a>
+    </mat-sidenav>
+    
+    <mat-sidenav-content>
+      <div class="mat-elevation-z2 mainContent">
+        
+        <router-outlet></router-outlet>
+
+      </div>
+      
+    </mat-sidenav-content>
+  
+  </mat-sidenav-container>

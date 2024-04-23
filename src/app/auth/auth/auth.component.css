@@ -1,0 +1,43 @@
+
+.content{
+    height: calc(100vh - 100px);
+    border-radius: 10px;
+    margin: 16px;
+    margin-left: 32px;
+    display: flex;
+    font-size: 2rem;
+    color: lightgray;
+}
+
+.login-form{
+    text-align: center;
+}
+
+.mat-sidenav-container{
+    height: calc(100vh - 65px);
+}
+
+.avatar{
+    height: 120px;
+    width: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto !important;
+    padding-top: 10px;
+}
+
+/*
+.logo{
+    position: relative;
+    left: 25%;
+    right: 50%;
+}
+*/
+
+.mat-drawer-container{
+    background: #46025210;
+}
+
+.content{
+    background: #460252;
+}

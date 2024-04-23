@@ -1,0 +1,32 @@
+<mat-sidenav-container>
+       
+    <mat-sidenav-content>
+        <div class="col-md-6 offset-md-3">
+            <div class="mat-elevation-z8 content justify-content-center">
+                <form [formGroup] = "authForm" (ngSubmit)="login();">
+                    <div class="login-form">
+                        <img src="https://cdn.pixabay.com/photo/2023/07/04/07/25/self-consciousness-8105584_960_720.jpg" class="avatar logo mat-elevation-z8 mt-5" alt="">
+                        <div class="mt-2">
+                            <label for="email" class="mt-5 d-flex justify-content-center">
+                                Email
+                            </label>
+                            <input type="email" class="form-control mt-2" placeholder="Ingrese su correo" formControlName="email">
+                        </div>
+    
+                        <div class="mt-2">
+                            <label for="password" class="mt-5 d-flex justify-content-center">
+                                Contraseña
+                            </label>
+                            <input type="password" class="form-control mt-2" placeholder="Ingrese su contraseña" formControlName="password">
+                        </div>
+                        <div class="col md-12 d-flex justify-content-center mt-5">
+                            <button  type="submit" class="btn btn-primary btn-lg" >Login</button>
+                        </div>
+                    </div>
+                </form>
+                
+              </div>
+        </div>
+    </mat-sidenav-content>
+  
+  </mat-sidenav-container>
